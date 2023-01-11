@@ -42,8 +42,11 @@ public class AdminUserRESTController {
         return ResponseEntity.ok().build();
     }
 
-    @PatchMapping
+    @PatchMapping("{id}")
     public ResponseEntity<User> updateUser(@RequestBody User user) {
+        if (user.getPassword() == null) {
+            user.setPassword((userService.getUserById(user.getId())).getPassword());
+        }
         userService.updateUser(user);
         return new ResponseEntity<>(user,HttpStatus.OK);
     }

@@ -166,9 +166,9 @@
 <div class="modal fade" id="userInfo" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form id="userForm" action="#" method="POST">
+            <form id="userForm" action="#" method="PATCH">
                 <div class="modal-header">
-                    <h3>Edit user</h3>
+                    <h3>Delete user</h3>
                 </div>
                 <div class="modal-body container text-center fw-bold w-50">
                     <div class="row">
@@ -176,34 +176,72 @@
                         <input type="text" class="form-control" id="id" name="id" disabled>
                     </div>
                     <div class="row">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-control username" name="username">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control name" name="name" disabled>
                     </div>
                     <div class="row">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control password" name="password">
+                        <label class="form-label">Age</label>
+                        <input type="number" class="form-control age" name="age" disabled>
                     </div>
                     <div class="row">
-                        <label class="form-label">First name</label>
-                        <input type="text" class="form-control firstName" name="firstName">
-                    </div>
-                    <div class="row">
-                        <label class="form-label">Last name</label>
-                        <input type="text" class="form-control lastName" name="lastName">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control city" name="city" disabled>
                     </div>
                     <div class="row">
                         <label class="form-label">Roles</label>
-                        <select class="form-select" id="roles" name="roles" multiple="multiple">
+                        <select class="form-select" id="roles" name="roles" multiple="multiple" disabled>
                         </select>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="modelButton" type="button" class="btn btn-danger">Delete</button>
+                    <button id="modelButton" type="button" class="btn btn-primary">Edit</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<!--<div class="modal fade" id="userEditInfo" tabindex="-1" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <form id="userEditForm" th:method="PATCH">-->
+<!--                <div class="modal-header">-->
+<!--                    <h3>Edit user</h3>-->
+<!--                </div>-->
+<!--                <div class="modal-body container text-center fw-bold w-50">-->
+<!--                    <div class="row">-->
+<!--                        <label class="form-label">ID</label>-->
+<!--                        <input type="text" class="form-control" id="id" name="id" disabled>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <label class="form-label">Name</label>-->
+<!--                        <input type="text" class="form-control name" name="name" >-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <label class="form-label"><b>Password</b></label>-->
+<!--                        <input name="password" type="password" class="form-control password"-->
+<!--                               placeholder="Password">-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <label class="form-label">Age</label>-->
+<!--                        <input type="number" class="form-control age" name="age" >-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <label class="form-label">City</label>-->
+<!--                        <input type="text" class="form-control city" name="city" >-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <label class="form-label">Roles</label>-->
+<!--                        <select class="form-select" id="roles" name="roles" multiple="multiple" >-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button id="editButton" type="button" class="btn btn-info">Edit</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!--<div class="row no-gutters vh-100">-->
 <!--    <div class="col-md-2 bg-white">-->
 <!--        <ul class="nav nav-pills flex-column mt-3">-->

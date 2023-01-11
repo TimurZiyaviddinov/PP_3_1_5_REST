@@ -110,14 +110,14 @@ $(document).ready(function () {
         async function sendRequest() {
             if ($("#modelButton").text() === "Edit") {
                 await fetch($("#userInfo form").attr("action"), {
-                    method: "POST",
+                    method: "PATCH",
                     headers: {
                         "Content-type": "application/json"
                     },
                     body: JSON.stringify(getUser("#userInfo"))
                 });
             } else {
-                await fetch($("#userInfo form").attr("action"), {method: "POST"});
+                await fetch($("#userInfo form").attr("action"), {method: "DELETE"});
             }
             run();
             $("#userInfo").modal("hide");
@@ -196,9 +196,9 @@ $(document).ready(function () {
             let user = await responseUser.json();
             let roles = await responseRole.json();
             $("#userInfo #id").val(user.id);
-            $("#userInfo .name").val(user.username);
-            $("#userInfo .age").val(user.firstName);
-            $("#userInfo .city").val(user.lastName);
+            $("#userInfo .name").val(user.name);
+            $("#userInfo .age").val(user.age);
+            $("#userInfo .city").val(user.city);
             let select = $("#userInfo #roles");
             select.empty();
             for (let i = 0; i < roles.length; i++) {
@@ -219,12 +219,19 @@ $(document).ready(function () {
             $("#userInfo .age").prop("disabled", false);
             $("#userInfo .city").prop("disabled", false);
             $("#userInfo #roles").prop("disabled", false);
-            $("#userInfo form").attr("action", "http://localhost:8080/admin/users/" + id + "/edit");
+            $("#userInfo form").attr("method", "PATCH").attr("action", "http://localhost:8080/admin/users/" + id);
             let button = $("#userInfo button");
             if (button.hasClass("btn-danger")) {
                 button.removeClass("btn-danger");
                 button.addClass("btn-primary")
-            }
+            };
+            fetch($("#userInfo").attr("action"), {
+                method: "PATCH",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(getUser("#userInfo"))
+            });
             $("#userInfo .btn-primary").text("Edit");
         }
 
@@ -235,7 +242,7 @@ $(document).ready(function () {
             $("#userInfo .age").prop("disabled", true);
             $("#userInfo .city").prop("disabled", true);
             $("#userInfo #roles").prop("disabled", true);
-            $("#userInfo form").attr("action", "http://localhost:8080/admin/users/" + id + "/delete");
+            $("#userInfo form").attr("method", "DELETE").attr("action", "http://localhost:8080/admin/users/" + id);
             let button = $("#userInfo button");
             if (button.hasClass("btn-primary")) {
                 button.removeClass("btn-primary");

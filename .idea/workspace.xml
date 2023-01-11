@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdb7fd61-26ed-4cdc-bed3-2440fc8ce0cb" name="Changes" comment="Password encodes in Service" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2J8pPiaZJoamL57ywt7QsGc6jLe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;S:/Java/Ult_IDEA projects/PP_3_1_5_REST/src/main/resources/static/js&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.62068963&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5fd84ccfa6c9c15e83b9197a7f97e652&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\static\js" />
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\static" />
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\templates" />
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_2_Boot_Security\src\main\resources\templates" />
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_2_Boot_Security\src\main\java\ru\kata\spring\boot_security\demo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\static\js" />
+      <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="PP_3_1_5_REST" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.kata.spring.boot_security.demo.RestApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.kata.spring.boot_security.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RestApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdb7fd61-26ed-4cdc-bed3-2440fc8ce0cb" name="Changes" comment="" />
+      <created>1671469542395</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671469542395</updated>
+      <workItem from="1671469543522" duration="1885000" />
+      <workItem from="1671514851602" duration="14527000" />
+      <workItem from="1671610303566" duration="5835000" />
+      <workItem from="1671620008162" duration="16000" />
+      <workItem from="1671620736401" duration="2192000" />
+      <workItem from="1671632454821" duration="324000" />
+      <workItem from="1671632826269" duration="1893000" />
+      <workItem from="1671634790263" duration="3599000" />
+      <workItem from="1671705144559" duration="1600000" />
+      <workItem from="1671720121222" duration="2622000" />
+      <workItem from="1671786941429" duration="30963000" />
+      <workItem from="1671837132987" duration="1958000" />
+      <workItem from="1671839197098" duration="239000" />
+      <workItem from="1671872386422" duration="3744000" />
+      <workItem from="1671964208923" duration="7863000" />
+      <workItem from="1671976776199" duration="5048000" />
+      <workItem from="1672040737212" duration="337000" />
+      <workItem from="1672054488334" duration="185000" />
+      <workItem from="1672055288164" duration="2719000" />
+      <workItem from="1672398640500" duration="40000" />
+      <workItem from="1672398689213" duration="481000" />
+      <workItem from="1672399242525" duration="4809000" />
+      <workItem from="1672406409603" duration="551000" />
+      <workItem from="1672407075690" duration="204000" />
+      <workItem from="1672916166326" duration="9421000" />
+      <workItem from="1673259527549" duration="4906000" />
+      <workItem from="1673270265027" duration="19106000" />
+      <workItem from="1673363290331" duration="867000" />
+      <workItem from="1673364167726" duration="3106000" />
+      <workItem from="1673371081692" duration="2220000" />
+      <workItem from="1673379321733" duration="216000" />
+      <workItem from="1673379552970" duration="19396000" />
+      <workItem from="1673427161416" duration="275000" />
+      <workItem from="1673427962059" duration="1917000" />
+      <workItem from="1673431428387" duration="2119000" />
+      <workItem from="1673433573261" duration="1853000" />
+      <workItem from="1673436817693" duration="5019000" />
+      <workItem from="1673441843337" duration="6337000" />
+    </task>
+    <task id="LOCAL-00001" summary="&quot;back&quot; button in DELETE fixed">
+      <created>1671530091556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671530091556</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;back&quot; button in DELETE fixed">
+      <created>1671531270243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671531270243</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Logic was transferred to Service">
+      <created>1671617959103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671617959103</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fetch type LAZY">
+      <created>1671621704662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671621704662</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Default ROLE_USER">
+      <created>1671632765335</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671632765335</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Password encodes in Service">
+      <created>1672054664291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672054664291</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Password encodes in Service">
+      <created>1672057982555</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672057982555</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="&quot;back&quot; button in DELETE fixed" />
+    <MESSAGE value="Logic was transferred to Service" />
+    <MESSAGE value="Fetch type LAZY" />
+    <MESSAGE value="Default ROLE_USER" />
+    <MESSAGE value="Password encodes in Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Password encodes in Service" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

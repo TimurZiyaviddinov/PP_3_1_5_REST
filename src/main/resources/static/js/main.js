@@ -135,9 +135,6 @@ $(document).ready(function () {
                 return array;
             }
             let id = null;
-            if (form === "#userInfo") {
-                id = $(form + " #id").val();
-            }
             return new User(id, $(form + " .name").val(), $(form + " .password").val(),
                 $(form + " .age").val(), $(form + " .city").val(), checkedRoles());
         }
@@ -224,15 +221,33 @@ $(document).ready(function () {
             if (button.hasClass("btn-danger")) {
                 button.removeClass("btn-danger");
                 button.addClass("btn-primary")
-            };
+            }
+            ;
+
             fetch($("#userInfo").attr("action"), {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify(getUser("#userInfo"))
+                body: JSON.stringify(getUpdateUser("#userInfo"))
             });
             $("#userInfo .btn-primary").text("Edit");
+        }
+
+        function getUpdateUser(form) {
+            let updatedRoles = () => {
+                let array = []
+                let options = document.querySelector('#rolesUpdate').options
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].selected) {
+                        array.push(roleSet[i])
+                    }
+                }
+                return array;
+            }
+            let id = $(form + " #id").val();
+            return new User(id, $(form + " .name").val(), $(form + " .password").val(),
+                $(form + " .age").val(), $(form + " .city").val(), updatedRoles());
         }
 
         function getDeleteModel(id) {

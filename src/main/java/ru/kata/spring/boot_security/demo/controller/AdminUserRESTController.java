@@ -60,3 +60,4 @@ public class AdminUserRESTController {
         userService.deleteUser(user);
     }
 }
+

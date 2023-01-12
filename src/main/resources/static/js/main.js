@@ -23,18 +23,8 @@ $(document).ready(function () {
             {id: 2, role: "ROLE_USER"}
         ];
 
+        //Заполнение таблицы данными и кнопками
         run();
-        // fillAddUser();
-
-        // async function fillAddUser() {
-        //     let responseRole = await fetch("http://localhost:8080/admin/role");
-        //     let roles = await responseRole.json();
-        //     let select = $("#user-addForm select");
-        //     for (let i = 0; i < roles.length; i++) {
-        //         let option = new Option(roles[i].name, roles[i].id);
-        //         select.append(option);
-        //     }
-        // }
 
         async function run() {
             await fillCurrentUser();
@@ -42,101 +32,6 @@ $(document).ready(function () {
             let users = await response.json();
             fillTable(users);
             addEditAndDeleteEventListeners();
-        }
-
-        async function fillCurrentUser() {
-            let responseCurrentUser = await fetch("/user/current");
-            let user = await responseCurrentUser.json();
-            let roles = "";
-            for (let i = 0; i < user.roles.length; i++) {
-                roles += user.roles[i].role.replace("ROLE_", "") + " ";
-            }
-            $("#company").text(user.name + " with roles: " + roles);
-            fillOneUserTable(user);
-        }
-
-        function fillOneUserTable(user) {
-            let tableBody = document.getElementsByTagName("tbody")[1];
-            let row = tableBody.insertRow();
-            let cellId = row.insertCell();
-            let cellName = row.insertCell();
-            let cellAge = row.insertCell();
-            let cellCity = row.insertCell();
-            let cellRoles = row.insertCell();
-            cellId.innerHTML = user.id;
-            cellName.innerHTML = user.name;
-            cellAge.innerHTML = user.age;
-            cellCity.innerHTML = user.city;
-            let roles = "";
-            for (let k = 0; k < user.roles.length; k++) {
-                roles += user.roles[k].role.replace("ROLE_", "") + " ";
-            }
-            cellRoles.innerHTML = roles;
-        }
-
-
-        function addEditAndDeleteEventListeners() {
-            let buttons = $("table button");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener("click", function () {
-                    showModel(buttons[i]);
-                });
-            }
-        }
-
-        document.getElementById("modelButton").addEventListener("click", sendRequest);
-        document.getElementById("addButton").addEventListener("click", addUser);
-
-        async function addUser() {
-            await fetch($("#user-addForm").attr("action"), {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(getUser("#user-addForm"))
-            });
-            run();
-            clearAddForm();
-            alert("New user added.");
-        }
-
-        function clearAddForm() {
-            $("#user-addForm .name").val("");
-            $("#user-addForm .password").val("");
-            $("#user-addForm .age").val("");
-            $("#user-addForm .city").val("");
-        }
-
-        async function sendRequest() {
-            if ($("#modelButton").text() === "Edit") {
-                await fetch($("#userInfo form").attr("action"), {
-                    method: "PATCH",
-                    headers: {
-                        "Content-type": "application/json"
-                    },
-                    body: JSON.stringify(getUser("#userInfo"))
-                });
-            } else {
-                await fetch($("#userInfo form").attr("action"), {method: "DELETE"});
-            }
-            run();
-            $("#userInfo").modal("hide");
-        }
-
-        function getUser(form) {
-            let checkedRoles = () => {
-                let array = []
-                let options = document.querySelector('#rolesCreate').options
-                for (let i = 0; i < options.length; i++) {
-                    if (options[i].selected) {
-                        array.push(roleSet[i])
-                    }
-                }
-                return array;
-            }
-            let id = null;
-            return new User(id, $(form + " .name").val(), $(form + " .password").val(),
-                $(form + " .age").val(), $(form + " .city").val(), checkedRoles());
         }
 
         function fillTable(users) {
@@ -177,6 +72,16 @@ $(document).ready(function () {
             }
         }
 
+        function addEditAndDeleteEventListeners() {
+            let buttons = $("table button");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", function () {
+                    showModel(buttons[i]);
+                });
+            }
+        }
+
+        //Заполнение модальных окон кнопок
         async function showModel(button) {
             await fillModel(button.value);
             if (button.name === "Edit") {
@@ -222,32 +127,7 @@ $(document).ready(function () {
                 button.removeClass("btn-danger");
                 button.addClass("btn-primary")
             }
-            ;
-
-            fetch($("#userInfo").attr("action"), {
-                method: "PATCH",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(getUpdateUser("#userInfo"))
-            });
             $("#userInfo .btn-primary").text("Edit");
-        }
-
-        function getUpdateUser(form) {
-            let updatedRoles = () => {
-                let array = []
-                let options = document.querySelector('#rolesUpdate').options
-                for (let i = 0; i < options.length; i++) {
-                    if (options[i].selected) {
-                        array.push(roleSet[i])
-                    }
-                }
-                return array;
-            }
-            let id = $(form + " #id").val();
-            return new User(id, $(form + " .name").val(), $(form + " .password").val(),
-                $(form + " .age").val(), $(form + " .city").val(), updatedRoles());
         }
 
         function getDeleteModel(id) {
@@ -264,6 +144,129 @@ $(document).ready(function () {
                 button.addClass("btn-danger")
             }
             $("#userInfo .btn-danger").text("Delete");
+        }
+
+        //Заполнение страницы текущего пользователя
+        async function fillCurrentUser() {
+            let responseCurrentUser = await fetch("/user/current");
+            let user = await responseCurrentUser.json();
+            let roles = "";
+            for (let i = 0; i < user.roles.length; i++) {
+                roles += user.roles[i].role.replace("ROLE_", "") + " ";
+            }
+            $("#company").text(user.name + " with roles: " + roles);
+            fillOneUserTable(user);
+        }
+
+        function fillOneUserTable(user) {
+            let tableBody = document.getElementsByTagName("tbody")[1];
+            let row = tableBody.insertRow();
+            let cellId = row.insertCell();
+            let cellName = row.insertCell();
+            let cellAge = row.insertCell();
+            let cellCity = row.insertCell();
+            let cellRoles = row.insertCell();
+            cellId.innerHTML = user.id;
+            cellName.innerHTML = user.name;
+            cellAge.innerHTML = user.age;
+            cellCity.innerHTML = user.city;
+            let roles = "";
+            for (let k = 0; k < user.roles.length; k++) {
+                roles += user.roles[k].role.replace("ROLE_", "") + " ";
+            }
+            cellRoles.innerHTML = roles;
+        }
+
+        //Функционал вкладки добаления нового пользователя(действие)
+        document.getElementById("addButton").addEventListener("click", addUser);
+
+        async function addUser() {
+            await fetch($("#user-addForm").attr("action"), {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(getUser("#user-addForm"))
+            });
+            run();
+            clearAddForm();
+            alert("New user added.");
+        }
+
+        function getUser(form) {
+            let checkedRoles = () => {
+                let array = []
+                let options = document.querySelector('#rolesCreate').options
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].selected) {
+                        array.push(roleSet[i])
+                    }
+                }
+                return array;
+            }
+            let id = null;
+            if (form === "#userInfo") {
+                id = $(form + " #id").val();
+            }
+            return new User(id, $(form + " .name").val(), $(form + " .password").val(),
+                $(form + " .age").val(), $(form + " .city").val(), checkedRoles());
+        }
+
+        function clearAddForm() {
+
+            $("#user-addForm .name").val("");
+            $("#user-addForm .password").val("");
+            $("#user-addForm .age").val("");
+            $("#user-addForm .city").val("");
+        }
+
+        //Функционал кнопок изменение/удаление (действие)
+        document.getElementById("modelButton").addEventListener("click", sendRequest);
+
+        async function sendRequest() {
+            if ($("#modelButton").text() === "Edit") {
+                await fetch($("#userInfo form").attr("action"), {
+                    method: "PATCH",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(getUpdateUser("#userInfo"))
+                });
+            } else {
+                await fetch($("#userInfo form").attr("action"), {method: "DELETE"});
+            }
+            run();
+            $("#userInfo").modal("hide");
+        }
+
+        function getUpdateUser(form) {
+            let checkedRoles = () => {
+                let array = []
+                let options = document.querySelector('#rolesUpdate').options
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].selected) {
+                        array.push(roleSet[i])
+                    }
+                }
+                return array;
+            }
+            let id = $(form + " #id").val();
+
+            return new User(id, $(form + " .name").val(), $(form + " .password").val(),
+                $(form + " .age").val(), $(form + " .city").val(), checkedRoles());
+
+            // let updatedRoles = () => {
+            //     let array = []
+            //     let options = document.querySelector('#rolesUpdate').options
+            //     for (let i = 0; i < options.length; i++) {
+            //         if (options[i].selected) {
+            //             array.push(roleSet[i])
+            //         }
+            //     }
+            //     return array;
+            // }
+            // return new User($(form + " .id").val(), $(form + " .name").val(), $(form + " .password").val(),
+            //     $(form + " .age").val(), $(form + " .city").val(), updatedRoles());
         }
     }
 )

@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fdb7fd61-26ed-4cdc-bed3-2440fc8ce0cb" name="Changes" comment="Only roles edit doesn't work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/AdminUserRESTController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/AdminUserRESTController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/userMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/userMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +59,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;S:/Java/Ult_IDEA projects/PP_3_1_5_REST/src/main/resources/static/js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;S:/Java/JavaScript/Node_js/node.exe&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.62068963&quot;,
@@ -83,7 +86,10 @@
       <recent name="S:\Java\Ult_IDEA projects\PP_3_1_5_REST\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RestApplication">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/src/main/resources/static/js">
+      <method v="2" />
+    </configuration>
     <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="PP_3_1_5_REST" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.kata.spring.boot_security.demo.RestApplication" />
@@ -100,6 +106,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.RestApplication" />
+        <item itemvalue="Node.js.main.js" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +156,8 @@
       <workItem from="1673433573261" duration="1853000" />
       <workItem from="1673436817693" duration="5019000" />
       <workItem from="1673441843337" duration="14995000" />
+      <workItem from="1673502159309" duration="7475000" />
+      <workItem from="1673509641507" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;back&quot; button in DELETE fixed">
       <created>1671530091556</created>
@@ -239,9 +248,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/AdminUserRESTController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserServiceImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/dao/UserDaoImpl.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/dao/UserDaoImpl.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserServiceImpl.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

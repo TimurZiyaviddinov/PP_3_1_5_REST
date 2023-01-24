@@ -10,7 +10,7 @@ import ru.kata.spring.boot_security.demo.model.User;
 
 @RestController
 @RequestMapping("/user")
-public class UserRESTController {
+public class UserRestController {
     @GetMapping("/current")
     public ResponseEntity<User> getUser(UsernamePasswordAuthenticationToken token) {
         return new ResponseEntity<>((User) token.getPrincipal(), HttpStatus.OK);
